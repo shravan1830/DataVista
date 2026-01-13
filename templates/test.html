@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="output">
+        </div>
+    <script>
+        const EXPECTED_OUTPUT = document.getElementById("output");
+      const obj = "[{"column_1": "value_11", "column_2": "value_12", "column_3": "value_13", "column_4": "value_14"}, {"column_1": "value_21", "column_2": "value_22", "column_3": "value_23", "column_4": "value_24"}, {"column_1": "value_31", "column_2": "value_32", "column_3": "value_33", "column_4": "value_34"}]"
+      const br = "<br>"
+        let html_str = "&emsp;["
+        for (const doc of JSON.parse(obj)) {
+            html_str+=br;
+            html_str+=`&emsp;&emsp;{${br}`
+            const entries = Object.entries(doc);
+            const len_entries = entries.length;
+            for(let idx  = 0 ; idx < len_entries; idx ++)
+            {
+               const field = entries[idx];
+
+               if(idx != len_entries - 1)
+                    html_str+=`&emsp;&emsp;&emsp;${field[0]} : ${field[1]},`;
+                else
+                html_str+=`&emsp;&emsp;&emsp;${field[0]} : ${field[1]}`;
+                html_str+=br;
+            }
+            html_str+=`&emsp;&emsp;},`
+         
+        }
+        html_str+=`${br}&emsp;]${br}`;
+        EXPECTED_OUTPUT.innerHTML = html_str;
+    </script>
+</body>
+</html>

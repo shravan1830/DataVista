@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Toolbar */
+.toolbar {
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.toolbar button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.toolbar-right {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.private-btn, .share-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    background-color: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.left-pane {
+    width: 20%;
+    padding: 10px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+}
+
+.editor-pane {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.query-editor {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    height: 150px;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.run-query-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Table Browser */
+.table-browser input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.table-browser ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-browser li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table-browser li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Spreadsheet Table */
+.grid-section {
+    padding: 10px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.spreadsheet {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spreadsheet th, .spreadsheet td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+.spreadsheet th {
+    background-color: #f4f4f4;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataVista</title>
+    <!-- MD Bootstrap CDN links-->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../static/style2.css">
+</head>
+<body>
+    <p id ="heading">🌐Data Vista🌐</p>
+    <p id="sub_title">I can generate database queries for you! <br> With Explanation as well!!!!</p>
+    <!--Generate Query -->
+    <div data-mdb-input-init class="form-outline">
+        <textarea class="form-control" id="query_des" rows="4"></textarea>
+        <label class="form-label" for="textAreaExample">Query Description</label> 
+    </div>
+    <button type="button" class="btn btn btn-outline-success btn-success" id="generate_query_btn">Generate Query</button>
+
+    <button class="btn btn-secondary" type="button" disabled id="spinner_btn">
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        <div id="load_text">Generating...</div>
+      </button>
+
+    <div class="alert alert-success hidden" role="alert">
+        Query Generated Successfully! Here is your Query below:
+    </div>
+    <!--Execute Query -->
+    <div data-mdb-input-init class="form-outline hidden">
+        <textarea class="form-control" id="generated_query" rows="4"></textarea>
+        <label class="form-label" for="textAreaExample">Generated Query</label>
+    </div>
+    <button type="button" class="btn btn btn-outline-success btn-success hidden" id="run_query_btn">Execute Query</button>
+
+    <!--Expected Output-->
+    <div class="alert alert-success hidden" role="alert" id="op_heading">
+        Expected Output of Query will be:
+    </div>
+    <table class="table table-hover">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="expected_output">
+
+    </div>
+    <div class="alert alert-success hidden" role="alert">
+        Explanation of the Query is:
+    </div>
+
+    <div class ="hidden" id = "explanation">
+    </div>
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.0.0/mdb.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.7/purify.min.js" integrity="sha512-BdRNuI8/lsyxkKQVxK1lVtfZshggfXPAwEP+JAOJEKx6Y8SLfcBSRdaWyXQmMxo+wG180uFqXYGjGRL0mh4/Jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../static/load_query.js"></script>
+</html>

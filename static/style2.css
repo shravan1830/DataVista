@@ -1,0 +1,47 @@
+body
+{
+    margin: 2.5% 20%;
+}
+#heading{
+    text-align: center;
+    margin-bottom: 2.5%;
+    font-size: 45px;
+    font-weight: bold;
+}
+#query_des, #generated_query{
+    margin-bottom: 2.5%;
+}
+button{
+    margin-bottom: 2.5%;
+    text-transform: none !important;
+}
+table{
+    margin-bottom: 2.5%;
+}
+.alert{
+    font-weight: bold;
+}
+code{
+    background-color: rgb(232 249 238);
+    color: darkcyan;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display:block;
+}
+#load_text{
+    min-width:75px;
+    display: inline-block;
+}
+#spinner_btn{
+    display: none;
+}
+#sub_title{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
